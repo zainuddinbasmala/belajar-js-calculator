@@ -7,8 +7,8 @@ let operasi = "";
 for(let i = 0; i < nilai.length; i++){
     nilai[i].addEventListener("click", function(){
         if(nilai[i].innerText === "+"){
+            operasi = nilai[i].innerText;
             angka1 = inputBox.value;
-            operasi = "+";
             inputBox.value = "0";
         } else if(nilai[i].innerText === "=") {
             angka2 = inputBox.value;
@@ -24,4 +24,4 @@ reset.addEventListener("click", function(){
     inputBox.value = "0"
     angka1 = 0
     angka2 = 0
-});
+})
