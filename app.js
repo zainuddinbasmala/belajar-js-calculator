@@ -7,13 +7,19 @@ let operasi = "";
 for(let i = 0; i < nilai.length; i++){
     nilai[i].addEventListener("click", function(){
         if(nilai[i].innerText === "+"){
-            operasi = nilai[i].innerText;
             angka1 = inputBox.value;
+            operasi = "+"
             inputBox.value = "0";
         } else if(nilai[i].innerText === "=") {
             angka2 = inputBox.value;
             if(operasi === "+") {
                 inputBox.value = parseInt(angka1) + parseInt(angka2)
+            }
+        } else {
+            if(inputBox.value === "0"){
+                inputBox.value = nilai[i].innerText
+            } else {
+                inputBox.value = inputBox.value + nilai[i].innerText
             }
         }
     })
