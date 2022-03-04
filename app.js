@@ -15,15 +15,6 @@ for(let i = 0; i < nilai.length; i++){
             if(operasi === "+") {
                 inputBox.value = parseInt(angka1) + parseInt(angka2)
             }
-            if(operasi === "-") {
-                inputBox.value = parseInt(angka1) - parseInt(angka2)
-            }
-        } else {
-            if(inputBox.value === "0"){
-                inputBox.value = nilai[i].innerText
-            } else {
-                inputBox.value = inputBox.value + nilai[i].innerText
-            } 
         }
     })
 }
@@ -32,5 +23,5 @@ const reset = document.getElementById("reset");
 reset.addEventListener("click", function(){
     inputBox.value = "0"
     angka1 = 0
-    angka2 - 0
-})
+    angka2 = 0
+});
